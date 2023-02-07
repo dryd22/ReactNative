@@ -9,7 +9,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 function HappyScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'lime' }}>
-      <Image source={{uri: 'https://c8.alamy.com/comp/2J0Y4NK/happy-emoji-emoticon-showing-double-thumbs-up-like-2J0Y4NK.jpg'}}  
+      <Image source={{uri: 'https://media.giphy.com/media/QWvra259h4LCvdJnxP/giphy.gif'}}  
        style={{width: 200, height: 200}} />
     </View>
   );
@@ -18,14 +18,14 @@ function HappyScreen({ navigation }) {
 function SadScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'cyan'}}>
-      <Image source={{uri: 'https://c8.alamy.com/comp/2BWXBWX/sad-emoji-emoticon-crying-bitterly-2BWXBWX.jpg'}} style = {{width: 200, height: 200}} />
+      <Image source={{uri: 'https://media2.giphy.com/media/tMnVRbvYiP8jala5Hg/200.webp?cid=ecf05e475kcj4qbkthweks29exikp6rqaaidgjhuvupbng27&rid=200.webp&ct=g'}} style = {{width: 200, height: 200}} />
     </View>
   );
 }
 function HowdyScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'orange'}}>
-      <Image source={{uri: 'https://thumbs.dreamstime.com/b/smiling-cowboy-emoticon-vector-design-90543422.jpg'}}
+      <Image source={{uri: 'https://media1.giphy.com/media/Ww26UTo6jq36WnRl5l/giphy.gif?cid=ecf05e47t50hd56z071oav2xdyb3qtytimch77uqtidn2c46&rid=giphy.gif&ct=g'}}
         style = {{width: 200, height: 200}}/>
     </View>
   );
