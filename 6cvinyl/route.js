@@ -13,7 +13,7 @@ database	:'tester'
 
 const app = express ();
 //Creating a get route that returns data from users table
-app.get('/users' , function (req,res) {
+/*app.get('/users' , function (req,res) {
 	//Connecting to DB
 	connection.getConnection (function (err, connection) {
 		//Executing query
@@ -22,7 +22,7 @@ app.get('/users' , function (req,res) {
 			res.send(results)
 		});
 	});
-});
+});*/
 
 //starting our server
 app.listen (3000, () =>{
