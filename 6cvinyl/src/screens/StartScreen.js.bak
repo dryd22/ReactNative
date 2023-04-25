@@ -12,7 +12,7 @@ export default function StartScreen({ navigation }) {
   return (
     <Background>
 	
-      <LottieView source={require('../../src/assets/lottie/88944-vinyl-loading.json')} 
+      <LottieView source={require('../src/assets/lottie/88944-vinyl-loading.json')} 
       style={{ width: '80%', aspectRatio: 1 }} autoPlay loop />
       <Header>6c Vinyl</Header>
       <Paragraph>

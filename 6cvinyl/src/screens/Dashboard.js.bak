@@ -106,7 +106,7 @@ export default function Dashboard({ navigation }) {
             }
 
            
-            return <Ionicons name={iconName} size={20} color={color} />;
+            return <Ionicons name={iconName} size={30} color={color} />;
           },
           tabBarActiveTintColor: '#ff71ce',
           tabBarInactiveTintColor: '#595959',
