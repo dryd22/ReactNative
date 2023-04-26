@@ -1,4 +1,6 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
+import { Text, Image, View, Pressable, Alert, StyleSheet } from 'react-native';
 import Background from '../components/Background'
 import Logo from '../components/Logo'
 import Header from '../components/Header'
@@ -9,6 +11,17 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { createStackNavigator } from '@react-navigation/stack'
 import Ionicons from 'react-native-vector-icons/Ionicons';
+
+  
+const Col = ({ numRows, children }) => {
+  return  (
+    <View style={styles[`${numRows}col`]}>{children}</View>
+  )
+}
+
+const Row = ({ children }) => (
+  <View style={styles.row}>{children}</View>
+)
 
 function HomeScreen({ navigation }) {
   return (
@@ -42,35 +55,64 @@ function SettingsScreen() {
   return (
     <Background >
       <Paragraph>Settings!</Paragraph>
-    </Background>
-  );
-}
-const DATA = [
-  {
-    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    title: 'First Item',
-  },
-  {
-    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-    title: 'Second Item',
-  },
-  {
-    id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Third Item',
-  },
-];
-function CollectionsScreen() {
-  return (
-    <Background >
-      <Paragraph>Here is what you have in your collection right now!</Paragraph>
+	  <Image source={{uri: 'https://media.giphy.com/media/z6EG2su1f5jOTourNL/giphy.gif',}} style={{ width: 100, height: 100}}/>
     </Background>
   );
 }
 
-function MainCatalogScreen() {
+function CollectionsScreen() {
   return (
     <Background >
-      <Paragraph>Main Catalog!</Paragraph>
+      <Paragraph>Here is what you have in your collection right now! Add new Items</Paragraph>
+    </Background>
+  );
+}
+
+function MainCatalogScreen () {
+  return  (
+    <Background >
+	 
+	<Header>Catalog Contents</Header>
+	<View style={styles.app}>
+      <Row>
+        <Col numRows={2}>
+         <>
+         <Image source={require('../../src/assets/Beyonce.jpg')}  style={{ width: 200, height: 200}}/>
+         </>
+        </Col>
+        <Col numRows={2}>
+        <>
+       <Image source={require('../../src/assets/Beetles.jpg')}  style={{ width: 200, height: 200}}/>
+             </>
+        </Col>
+      </Row>
+      <Row>
+        <Col numRows={2}>
+         <>
+                  <Image source={require('../../src/assets/Pdiddy.jpg')} style={{ width: 200, height: 200}}/>
+		</>
+        </Col>
+        <Col numRows={2}>         
+      <>        
+        <Image source={require('../../src/assets/KMFDM.jpg')}  style={{ width: 200, height: 200}}/>
+         </>
+        </Col>
+      </Row>
+	  <Row>
+        <Col numRows={2}>
+         <>
+                  <Image source={require('../../src/assets/VanHalen.jpg')} style={{ width: 200, height: 200}}/>
+		</>
+        </Col>
+        <Col numRows={2}>         
+      <>        
+        <Image source={require('../../src/assets/WHAM.jpg')}  style={{ width: 200, height: 200}}/>
+         </>
+        </Col>
+      </Row>
+    </View>
+ 
+   
     </Background>
   );
 }
@@ -121,3 +163,45 @@ export default function Dashboard({ navigation }) {
       </Tab.Navigator>
 )}
 
+const styles = StyleSheet.create({
+  app: {
+    flex: 4, // the number of columns you want to devide the screen into
+    marginHorizontal: "auto",
+    width: 400,
+    height: 1000,
+    backgroundColor: "grey"
+  },
+
+  row: {
+    flexDirection: "row"
+  },
+  "1col":  {
+    backgroundColor:  "grey",
+    borderColor:  "#fff",
+    borderWidth:  1,
+    flex:  1
+  },
+  "2col":  {
+    backgroundColor:  "grey",
+    borderColor:  "black",
+    borderWidth:  1,
+    flex:  2
+  },
+  "3col":  {
+    backgroundColor:  "grey",
+    borderColor:  "#fff",
+    borderWidth:  1,
+    flex:  3
+  },
+  "4col":  {
+    flex:  4
+  },
+   container: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#ecf0f1',
+    padding: 8,
+  },
+
+
+});
