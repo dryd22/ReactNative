@@ -1,11 +1,12 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Text, Image, View, Pressable, Alert, StyleSheet } from 'react-native';
+import { Text, Image, View, Pressable, Alert, StyleSheet,SafeViewArea } from 'react-native';
 import Background from '../components/Background'
 import Logo from '../components/Logo'
 import Header from '../components/Header'
 import Paragraph from '../components/Paragraph'
 import Button from '../components/Button'
+import AddScreen from '../screens/AddScreen'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
@@ -55,7 +56,7 @@ function SettingsScreen() {
   return (
     <Background >
       <Paragraph>Settings!</Paragraph>
-	  <Image source={{uri: 'https://media.giphy.com/media/z6EG2su1f5jOTourNL/giphy.gif',}} style={{ width: 100, height: 100}}/>
+	  <Image source={{uri: 'https://media.giphy.com/media/z6EG2su1f5jOTourNL/giphy.gif',}} style={{ width: 300, height: 200}}/>
     </Background>
   );
 }
@@ -64,6 +65,10 @@ function CollectionsScreen() {
   return (
     <Background >
       <Paragraph>Here is what you have in your collection right now! Add new Items</Paragraph>
+	  
+	  <Button mode="contained" onPress={() => navigation.navigate('AddScreen')}>Add</Button>
+	  <Header>Your record collection</Header>
+	  
     </Background>
   );
 }
