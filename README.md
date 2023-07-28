@@ -1,1 +1,1 @@
-# ReactNativeThis is for the project testing an parts area for SE 350
+# ReactNativeThis is for the project testing and development area for react native
